@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+    environment {
+            dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
+    }
+    stages {
+        stage ('Clean workspace') {
+            steps {
+                 cleanWs()
+                  }
+            }
+        stage('Git Checkout Stage') {
+            steps {
+                git credentialsId: '16bfa687-481d-4e58-a40d-18d843d0d503', url: 'https://github.com/PavithradeviRajanbabu/CICDDemoPipeline.git', branch: 'main'
+            }
+        }
+        stage('Restore packages') {
+             steps {
+                bat "dotnet restore ${workspace}\\JenkinsWebApplicationDemo.sln"
+                   }
+        }
+        stage('Build Stage') {
+            steps {
+                bat "MSBuild.exe ${workspace}\\JenkinsWebApplicationDemo.sln /nologo /nr:false /t:clean;restore;rebuild"
+                  }
+        }    
+        stage('Test Stage') {
+            steps {
+                bat 'dotnet test %WORKSPACE%\\TestProject1\\TestProject1.csproj'
+            }
+        }
+        stage("Release Stage") {
+            steps {
+                bat 'dotnet build %WORKSPACE%\\JenkinsWebApplicationDemo.sln /p:PublishProfile="%WORKSPACE%\\JenkinsWebApplicationDemo\\Properties\\PublishProfiles_Jenkins\\FolderProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
+            }
+        }
+        stage('Deploy Stage') {
+            steps {
+                 echo 'Deployed'
+            }
+        }
+    }
+}
