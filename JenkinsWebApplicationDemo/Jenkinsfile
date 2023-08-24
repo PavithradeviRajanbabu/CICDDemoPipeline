@@ -9,15 +9,16 @@ pipeline {
                  cleanWs()
                   }
             }
-        node {
+   
+       stage('Git Checkout Stage') {
+            steps {
+                     node {
     checkout scm
     /* .. snip .. */
 }
-      /* stage('Git Checkout Stage') {
-            steps {
-                git credentialsId: '16bfa687-481d-4e58-a40d-18d843d0d503', url: 'https://github.com/PavithradeviRajanbabu/CICDDemoPipeline.git', branch: 'main'
+               /* git credentialsId: '16bfa687-481d-4e58-a40d-18d843d0d503', url: 'https://github.com/PavithradeviRajanbabu/CICDDemoPipeline.git', branch: 'main' */
             }
-        } */
+        } 
         stage('Restore packages') {
              steps {
                 bat "dotnet restore ${workspace}\\JenkinsWebApplicationDemo.sln"
