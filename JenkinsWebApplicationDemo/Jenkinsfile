@@ -39,10 +39,10 @@ pipeline {
         stage('Docker Build') {
             steps {
                  echo 'Building application image'
-                 dir("./JenkinsWebApplicationDemo")
-                {
+                 //dir("./JenkinsWebApplicationDemo")
+               // {
                     sh "docker build -t JenkinsWebApplicationDemo:1 ."
-                }
+               // }
             }
         }
 
