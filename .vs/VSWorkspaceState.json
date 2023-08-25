@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\JenkinsWebApplicationDemo"
+    "\\JenkinsWebApplicationDemo",
+    "\\JenkinsWebApplicationDemo\\Controllers"
   ],
-  "SelectedNode": "\\JenkinsWebApplicationDemo\\Jenkinsfile",
+  "SelectedNode": "\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.sln",
   "PreviewInSolutionExplorer": false
 }

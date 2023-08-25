@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj": {}
+    "C:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj": {}
   },
   "projects": {
-    "c:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj": {
+    "C:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj",
+        "projectUniqueName": "C:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj",
         "projectName": "JenkinsWebApplicationDemo",
-        "projectPath": "c:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj",
+        "projectPath": "C:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo.csproj",
         "packagesPath": "C:\\Users\\pavit\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\obj\\",
+        "outputPath": "C:\\Users\\pavit\\source\\repos\\JenkinsWebApplicationDemo\\JenkinsWebApplicationDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "c:\\Users\\pavit\\NuGet.Config",
+          "C:\\Users\\pavit\\NuGet.Config",
           "C:\\Users\\pavit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

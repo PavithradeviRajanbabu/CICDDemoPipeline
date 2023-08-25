@@ -53,3 +53,13 @@ pipeline {
         }
     }
 }
+
+    post
+    {
+        always
+        {
+            //Cleanup
+            echo 'Start Cleanup...'
+            cleanWs()
+        }
+    }
