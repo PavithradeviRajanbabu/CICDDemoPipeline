@@ -41,7 +41,7 @@ pipeline {
                  echo 'Building application image'
                  //dir("./JenkinsWebApplicationDemo")
                // {
-                    sh "docker build -t JenkinsWebApplicationDemo:1 ."
+                    sh "docker build -t JenkinsWebApplicationDemo ."
                // }
             }
         }
