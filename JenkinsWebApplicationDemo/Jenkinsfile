@@ -35,6 +35,17 @@ pipeline {
                 bat 'dotnet build %WORKSPACE%\\JenkinsWebApplicationDemo.sln /p:PublishProfile="%WORKSPACE%\\JenkinsWebApplicationDemo\\Properties\\PublishProfiles_Jenkins\\FolderProfile.pubxml" /p:Platform="Any CPU" /p:DeployOnBuild=true /m'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                 echo 'Building application image'
+                 dir("./JenkinsWebApplicationDemo")
+                {
+                    sh "docker build -t JenkinsWebApplicationDemo:pavithra ."
+                }
+            }
+        }
+
         stage('Deploy Stage') {
             steps {
                  echo 'Deployed'
