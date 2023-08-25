@@ -41,7 +41,7 @@ pipeline {
                  echo 'Building application image'
                  //dir("./JenkinsWebApplicationDemo")
                // {
-                    bat 'docker build --tag %WORKSPACE%\\JenkinsWebApplicationDemo .'
+                    bat 'docker build --tag JenkinsWebApplicationDemo .'
                // }
             }
         }
