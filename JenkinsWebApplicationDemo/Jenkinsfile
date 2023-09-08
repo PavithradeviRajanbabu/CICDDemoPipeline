@@ -2,20 +2,18 @@ pipeline {
      agent {
   label 'AWS_BUILD_AGENT'
            }
-    environment {
-            dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
-                }
+        options
+    {
+        timeout(time: 15, unit: 'MINUTES')
+        skipStagesAfterUnstable()
+        disableConcurrentBuilds()
+    }
     stages {
         stage ('Clean workspace') {
             steps {
                  cleanWs()
                   }
             }
-        stage('Git Checkout Stage') {
-            steps {         
-               git credentialsId: '16bfa687-481d-4e58-a40d-18d843d0d503', url: 'https://github.com/PavithradeviRajanbabu/CICDDemoPipeline.git', branch: 'main' 
-            }
-        } 
         stage('Restore packages') {
              steps {
                 bat "dotnet restore ${workspace}\\JenkinsWebApplicationDemo.sln"
